@@ -1,4 +1,4 @@
-// State Management Values
+
 let currentInput = '0';
 let previousInput = '';
 let activeOperator = null;
@@ -7,7 +7,7 @@ let shouldResetScreen = false;
 const displayElement = document.getElementById('display');
 const historyElement = document.getElementById('history');
 
-// Appends numbers smoothly to display state
+
 function appendNumber(number) {
     if (currentInput === '0' || shouldResetScreen) {
         resetCurrentDisplay();
@@ -32,7 +32,7 @@ function resetCurrentDisplay() {
     shouldResetScreen = false;
 }
 
-// Configures current expression step and handles chained operations
+
 function appendOperator(operator) {
     if (activeOperator !== null && !shouldResetScreen) {
         calculate();
@@ -43,14 +43,14 @@ function appendOperator(operator) {
     shouldResetScreen = true;
 }
 
-// Dynamic operator text visual helper
+
 function getOperatorSymbol(op) {
     if (op === '*') return '×';
     if (op === '/') return '÷';
     return op;
 }
 
-// Evaluates mathematical expression steps explicitly without eval()
+
 function calculate() {
     if (activeOperator === null || shouldResetScreen) return;
 
@@ -101,7 +101,7 @@ function clearAll() {
     updateDisplay();
 }
 
-// Drops last entered string character index slice
+
 function deleteLast() {
     if (shouldResetScreen) return;
     currentInput = currentInput.toString().slice(0, -1);
@@ -111,7 +111,7 @@ function deleteLast() {
     updateDisplay();
 }
 
-// Synchronizes state engine mutations down to UI elements
+
 function updateDisplay() {
     displayElement.innerText = currentInput;
 }
