@@ -3,46 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cal</title>
+    <title>Calculator</title>
     <link rel="stylesheet" href="cal.css">
-    <script src="cal.js"></script>
+  
 </head>
 <body>
 
-    <div class="calculator">
-        
-        <div class="calculator-screen">
-            <div id="history" class="screen-history"></div>
-            <div id="display" class="screen-current">0</div>
-        </div>
+<div class="calculator">
+    <input type="text" placeholder="0" >
 
-      
-        <div class="calculator-keys">
-            <button type="button" class="key-control" onclick="clearAll()">AC</button>
-            <button type="button" class="key-control" onclick="deleteLast()">DEL</button>
-            <button type="button" class="key-operator" onclick="appendOperator('%')">%</button>
-            <button type="button" class="key-operator" onclick="appendOperator('/')">÷</button>
+    <div class="buttons">
+        <button onclick="deleteall()">AC</button>
+        <button onclick="deleteone()">DEL</button>
+        <button onclick="appendOperator('%')">%</button>
+        <button onclick="appendOperator('/')">/</button>
 
-            <button type="button" onclick="appendNumber('7')">7</button>
-            <button type="button" onclick="appendNumber('8')">8</button>
-            <button type="button" onclick="appendNumber('9')">9</button>
-            <button type="button" class="key-operator" onclick="appendOperator('*')">×</button>
+        <button onclick="appendNumber(7)">7</button>
+        <button onclick="appendNumber(8)">8</button>
+        <button onclick="appendNumber(9)">9</button>
+        <button onclick="appendOperator('*')">*</button>
 
-            <button type="button" onclick="appendNumber('4')">4</button>
-            <button type="button" onclick="appendNumber('5')">5</button>
-            <button type="button" onclick="appendNumber('6')">6</button>
-            <button type="button" class="key-operator" onclick="appendOperator('-')">−</button>
+        <button onclick="appendNumber(4)">4</button>
+        <button onclick="appendNumber(5)">5</button>
+        <button onclick="appendNumber(6)">6</button>
+        <button onclick="appendOperator('-')">-</button>
 
-            <button type="button" onclick="appendNumber('1')">1</button>
-            <button type="button" onclick="appendNumber('2')">2</button>
-            <button type="button" onclick="appendNumber('3')">3</button>
-            <button type="button" class="key-operator" onclick="appendOperator('+')">+</button>
+        <button onclick="appendNumber(1)">1</button>
+        <button onclick="appendNumber(2)">2</button>
+        <button onclick="appendNumber(3)">3</button>
+        <button onclick="appendOperator('+')">+</button>
 
-            <button type="button" class="key-zero" onclick="appendNumber('0')">0</button>
-            <button type="button" onclick="appendDecimal('.')">.</button>
-            <button type="button" class="key-equal" onclick="calculate()">=</button>
-        </div>
+        <button onclick="appendNumber(0)">0</button>
+        <button onclick="appendDot()">.</button>
+        <button onclick="calculation()">=</button>
     </div>
-
+</div>
+<script src="cal.js"></script>
 </body>
 </html>
