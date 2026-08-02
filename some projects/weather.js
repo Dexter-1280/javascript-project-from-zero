@@ -1,29 +1,33 @@
-const searchBox=document.querySelector(".search-box");
-const enterButton=document.querySelector(".enterbutton");
-const cityName=document.querySelector(".cityName");
+const searchBox = document.querySelector(".search-box");
+const enterButton = document.querySelector(".enterbutton");
+const cityInput = document.querySelector(".cityInput");
+const cityName = document.querySelector(".cityName");
 const description = document.querySelector(".description");
-const apiKey="";
-enterButton.addEventListener("submit",event=>{
-event.preventDefault(); 
-const city=cityInput.value;
-if(city==""){
-displayError("Please enter the city");
-return;
-}
 
+const apiKey = "";
+
+enterButton.addEventListener("click", () => {
+    const city = cityInput.value.trim();
+
+    if (city === "") {
+        displayError("Please enter the city");
+        return;
+    }
+
+    getWeatherData(city);
 });
 
-async function getweatherData(city) {
-    
-}
-function displayWeatherInfo(data){
-
+async function getWeatherData(city) {
 
 }
-function getweatherEmoji(weatherId){
+
+function displayWeatherInfo(data) {
 
 }
-const description = document.querySelector(".description");
+
+function getWeatherEmoji(weatherId) {
+
+}
 
 function displayError(message) {
     description.innerHTML = "";
