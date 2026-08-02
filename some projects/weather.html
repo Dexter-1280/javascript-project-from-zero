@@ -1,15 +1,171 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Weather and forcast </title>
-    <link rel="stylesheet" herf="weather.css">
-     
+    <title>Weather Forecast</title>
+
+    <link rel="stylesheet" href="weather.css">
+
+    <link href="https://cdn.jsdelivr.net/npm/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
 </head>
+
 <body>
 
+<div class="overlay">
+
+    <nav>
+
+        <div class="logo">
+            <i class='bx bx-cloud'></i>
+            <h2>Forecast</h2>
+        </div>
+
+        <div class="nav-right">
+
+     
+
+            <div class="search-box">
+
+                <i class='bx bx-search'></i>
+
+                <input type="text"
+                placeholder="Search City"
+                class="cityInput">
+             <button class="enterbutton">Search</button>
+            </div>
+
+        </div>
+
+    </nav>
+
+
+    <main>
+
+        <div class="weather">
+
+            <h1 class="cityName">
+                Search City...
+            </h1>
+
+            <img
+            class="weatherIcon"
+            src="weather-icon.webp">
+
+            <h2 class="temp">
+                --
+            </h2>
+
+            <p class="description">
+                Weather Description
+            </p>
+
+        </div>
+
+
+        <div class="chips">
+
+            <div class="chip">
+                Air Quality
+                <span id="aqi">--</span>
+            </div>
+
+            <div class="chip">
+                Feels Like
+                <span id="feel">--</span>
+            </div>
+
+            <div class="chip">
+                Humidity
+                <span id="humidity">--</span>
+            </div>
+
+            <div class="chip">
+                Max Temp
+                <span id="max">--</span>
+            </div>
+
+            <div class="chip">
+                Min Temp
+                <span id="min">--</span>
+            </div>
+
+            <div class="chip">
+                Wind Speed
+                <span id="wind">--</span>
+            </div>
+
+            <div class="chip">
+                Visibility
+                <span id="visibility">--</span>
+            </div>
+
+            <div class="chip">
+                Pressure
+                <span id="pressure">--</span>
+            </div>
+
+            <div class="chip">
+                Sunrise
+                <span id="sunrise">--</span>
+            </div>
+
+            <div class="chip">
+                Sunset
+                <span id="sunset">--</span>
+            </div>
+
+        </div>
+
+
+
+        <section class="forecast">
+
+            <h2>Daily Forecast</h2>
+
+            <div class="forecastCards">
+
+                <div class="dayCard">
+                    <h3>Monday</h3>
+                    <img src="https://openweathermap.org/img/wn/01d@2x.png">
+                    <p>30°C</p>
+                </div>
+
+                <div class="dayCard">
+                    <h3>Tuesday</h3>
+                    <img src="https://openweathermap.org/img/wn/02d@2x.png">
+                    <p>28°C</p>
+                </div>
+
+                <div class="dayCard">
+                    <h3>Wednesday</h3>
+                    <img src="https://openweathermap.org/img/wn/10d@2x.png">
+                    <p>24°C</p>
+                </div>
+
+                <div class="dayCard">
+                    <h3>Thursday</h3>
+                    <img src="https://openweathermap.org/img/wn/03d@2x.png">
+                    <p>29°C</p>
+                </div>
+
+                <div class="dayCard">
+                    <h3>Friday</h3>
+                    <img src="https://openweathermap.org/img/wn/04d@2x.png">
+                    <p>27°C</p>
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
 </div>
-    <link src="weather.js">
+
+<script src="script.js"></script>
+
 </body>
+
 </html>
